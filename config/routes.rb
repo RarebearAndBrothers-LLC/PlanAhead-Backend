@@ -1,23 +1,8 @@
 Rails.application.routes.draw do
-  get 'user_habits/index'
-  get 'user_habits/show'
-  get 'user_habits/edit'
-  get 'user_habits/new'
-  get 'user_habits/destroy'
-  get 'goals/index'
-  get 'goals/show'
-  get 'goals/new'
-  get 'goals/edit'
-  get 'goals/destroy'
-  get 'habits/index'
-  get 'habits/new'
-  get 'habits/show'
-  get 'habits/edit'
-  get 'habits/destroy'
-  get 'users/index'
-  get 'users/new'
-  get 'users/show'
-  get 'users/edit'
-  get 'users/destroy'
+  resources :users
+  resources :habits
+  resources :goals
+  resources :user_habits
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
