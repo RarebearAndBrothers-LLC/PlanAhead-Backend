@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'user_habits/index'
+  get 'user_habits/show'
+  get 'user_habits/edit'
+  get 'user_habits/new'
+  get 'user_habits/destroy'
   get 'goals/index'
   get 'goals/show'
   get 'goals/new'
