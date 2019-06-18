@@ -1,4 +1,4 @@
-class AuthController < ApplicationController
+class Api::V1::AuthController < ApplicationController
     skip_before_action :authorized, only: [:create]
 
     def create
@@ -12,9 +12,9 @@ class AuthController < ApplicationController
         render json: { message: 'Invalid username or password' }, status: :unauthorized
       end
     end
-  
+
     private
-  
+
     def user_login_params
       # params { user: {username: 'Chandler Bing', password: 'hi' } }
       params.require(:user).permit(:username, :password)
